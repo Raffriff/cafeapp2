@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @profile.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @profile.lastname %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @profile.number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user %>
+</p>
+
+<h2>Orders</h2>
+<%= @profile.orders.each do |order| %>
+<p>
+  <b>Pick up Time:</b>
+  <%= order.pickUpTime %>
+  <b>Price:</b>
+  <%= order.totalPrice %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %> |
+<%= link_to 'Show Orders', profile_orders_path(@profile) %>

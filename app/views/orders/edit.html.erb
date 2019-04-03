@@ -1,0 +1,7 @@
+<h1>Editing Order</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', profile_order_path(@profile, @order) %> |
+<%= link_to 'Back', profile_orders_path(@profile) %> |
+<%= link_to 'New Order item', new_profile_order_order_item_path(@profile, @order, @order_items) %>

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Pickuptime:</strong>
+  <%= @order.pickUpTime %>
+</p>
+
+<p>
+  <strong>Totalprice:</strong>
+  <%= @order.totalPrice %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @order.profile %>
+</p>
+
+<h2>Items</h2>
+<% @order.order_items.each do |order_item| %>
+<p>
+  <%= order_item %>
+</p>
+<% end %>
+
+<%= link_to 'Edit Order', edit_profile_order_path(@profile, @order) %> |
+<%= link_to 'Back to Profile', profile_path(@profile) %> |
+<%= link_to 'New Order item', new_profile_order_order_item_path(@profile, @order) %>
+<%= link_to 'Show Order Items', profile_order_order_items_path(@profile, @order) %>
+
